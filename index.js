@@ -1,6 +1,7 @@
 // console.log("こんにちは");
 // console.log("さようなら");
 
+const fs = require('fs');
 const express = require("express");
 const app = express();
 // const coronaData = require("./coronaData.json");
@@ -11,7 +12,9 @@ app.get("/", function (req, res) {
 });
 
 app.post("/autumn", function (req, res) {
-  console.log("reqの中身", req.body);
+  fs.writeFile(__dirname + "/data.txt", req.body.activity, function() {
+    res.send("投稿完了");
+  });
 });
 
 // バックエンドサーバーとブラウザをつなぐ
