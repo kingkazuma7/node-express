@@ -1,6 +1,3 @@
-// console.log("こんにちは");
-// console.log("さようなら");
-
 const fs = require('fs');
 const express = require("express");
 const app = express();
