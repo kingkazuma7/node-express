@@ -33,3 +33,9 @@ app.post("/delete", function (req, res) {
 app.listen(5000, function() {
   console.log("Listeningonlocalhostport5000");
 })
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, function () {
+  console.log(`Listening on ${port}`);
+})
